@@ -1,1 +1,32 @@
 /* 아래에 CSS를 작성해주세요. */
+
+.title{
+    text-align: center;
+}
+.about{
+    display: block;
+    font-size: 12px;
+}
+.card{
+    width: 900px;
+    display: flex;
+}
+
+.card-img{
+    width: 300px;
+    margin-left: 30px;
+}
+.card-size{
+    width: 100%;
+    border-radius:5%;
+}
+.gray{
+    color: gray;
+    font-size: 7PX;
+    margin-bottom: -15px;
+}
+.guide{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
