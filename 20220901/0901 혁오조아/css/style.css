@@ -1,0 +1,65 @@
+
+.nav{
+    display: flex;
+    height: 60px;
+    position: sticky;
+    justify-content: space-between;
+}
+
+
+.nav-logo{
+    width: 150px;
+    height: 60px;
+}
+.nav-href{
+    text-decoration-line: none;
+    font-size: 15px;
+}
+.nav-ul{
+    display:flex;
+    margin: 1rem;
+}
+.nav-li{
+    margin-right: 20px;
+}
+.nav-href:hover{
+    color: rgb(20, 207, 145);
+    background-color: rgb(84, 16, 148);
+    border-radius: 5%;
+}
+.boundary{
+    width: 1962px;
+    border-style: solid;
+    border-color: brown;
+    border-width: 1px;
+}
+.main-size{
+    display:flex;
+    width: 1962px;
+    height: 595px;
+    border-style: solid;
+    border-color: brown;
+    border-width: 1px;
+}
+.card{
+    width: 600px;
+    height: 550px;
+    border-style: solid;
+    border-color: pink;
+    border-width: 1px;
+    margin: 10px;
+    background-color: bisque;
+}
+.video{
+    padding: 10px;
+    margin-left: 15px;
+}
+.video-title{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(238, 134, 151);
+    margin-top: 15px ;
+
+}
