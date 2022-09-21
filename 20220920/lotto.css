@@ -1,0 +1,25 @@
+.center{
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+.ball{
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 10rem;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.ball-container{
+    display: flex;
+    justify-content: center;
+}
+.button-size{
+    margin: 2rem;
+    width: 10rem;
+    height: 2rem;
+}
