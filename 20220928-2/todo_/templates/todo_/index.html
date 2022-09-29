@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="{% url 'todo_:create' %}">
+        <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">일정추가</span>
+            <input type="text" class="form-control" placeholder="입력하기" aria-label="Username"
+                aria-describedby="basic-addon1" name="content_" maxlength="80">
+        </div>
+        <br>
+        <div class="d-flex">
+            <span class="input-group-text" id="basic-addon1">우선순위</span>
+            <select class="form-select" aria-label="Default select example" name="priority_">
+                <option selected>우선순위를 선택해주세요</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <br>
+        <div class="d-flex">
+            <span class="input-group-text" id="basic-addon1">마감 기한</span>
+            <input type="date" class="form-control" aria-label="Username" name="deadline_"
+                aria-describedby="basic-addon1" name="content_">
+            </select>
+        </div>
+
+        <br>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-secondary" style="width: 50rem;">제출하기</button>
+        </div>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">우선순위</th>
+                    <th scope="col">할일내용</th>
+                    <th scope="col">생성 날짜</th>
+                    <th scope="col">마감기한</th>
+                    <th scope="col">진행상태</th>
+                    <th scope="col">상태변경</th>
+                    <th scope="col">삭제</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for confirmation in check %}
+                <tr>
+                    <th scope="row">{{confirmation.priority}}</th>
+                    <td>{{ confirmation.content }}</td>
+                    <td>{{ confirmation.created_at }}</td>
+                    <td>{{ confirmation.deadline }}</td>
+                    <td>{{ confirmation.completed }}</td>
+                    <td>{{ confirmation.completed }}</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm" href="delete/{{ confirmation.id }}">
+                            삭제
+                        </a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </form>
+    <ul>
+        <!-- {% for confirmation in check %}
+        <li>{{ confirmation }} - {{ confirmation.id }}
+            <a href="delete/{{ confirmation.id }}">
+                [삭제]
+            </a>
+        </li>
+        {% endfor %} -->
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
